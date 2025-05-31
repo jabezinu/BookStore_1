@@ -19,4 +19,8 @@ previous page
 import { IoMdArrowRoundBack } from "react-icons/io";
 <IoMdArrowRoundBack />
 
+pluse icon
+import { FaPlus } from "react-icons/fa";
+<FaPlus />
+
 -->
