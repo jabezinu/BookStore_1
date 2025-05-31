@@ -3,7 +3,7 @@ import React from 'react'
 const Edit = () => {
   return (
     <div>
-      edit
+      <h1>hello</h1>
     </div>
   )
 }
