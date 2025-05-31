@@ -1,6 +1,6 @@
 <!--
  info
-import { FaInfoCircle } from "react-icons/fa";
+import { FaBackspace, FaInfoCircle } from "react-icons/fa";
 <FaInfoCircle />
 
 update
@@ -14,4 +14,9 @@ import { MdDelete } from "react-icons/md";
 loading
 import { TbFidgetSpinner } from "react-icons/tb";
 <TbFidgetSpinner /> 
+
+FaBackspace
+import { IoMdArrowRoundBack } from "react-icons/io";
+<IoMdArrowRoundBack />
+
 -->
