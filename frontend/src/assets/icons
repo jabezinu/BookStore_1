@@ -1,0 +1,17 @@
+<!--
+ info
+import { FaInfoCircle } from "react-icons/fa";
+<FaInfoCircle />
+
+update
+import { GrUpdate } from "react-icons/gr";
+<GrUpdate />
+
+delete
+import { MdDelete } from "react-icons/md";
+<MdDelete />
+
+loading
+import { TbFidgetSpinner } from "react-icons/tb";
+<TbFidgetSpinner /> 
+-->
