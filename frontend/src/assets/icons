@@ -15,7 +15,7 @@ loading
 import { TbFidgetSpinner } from "react-icons/tb";
 <TbFidgetSpinner /> 
 
-FaBackspace
+previous page
 import { IoMdArrowRoundBack } from "react-icons/io";
 <IoMdArrowRoundBack />
 
