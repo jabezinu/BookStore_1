@@ -1,26 +1,27 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
 import { GrUpdate } from "react-icons/gr";
 import { FaInfoCircle } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 
 const Home = () => {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true)
+        setLoading(true);
         axios.get(`http://localhost:5555/books`)
-        .then((res) => {
-            setBooks(res.data)
-            setLoading(false)  
-        })
-        .catch((err) => {
-            console.log(err)
-            setLoading(false) 
-        })
-    }, [])
+            .then((res) => {
+                setBooks(res.data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.log(err);
+                setLoading(false);
+            });
+    }, []);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-800 relative overflow-hidden">
@@ -40,6 +41,20 @@ const Home = () => {
                     </h1>
                     <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-4"></div>
                     <p className="text-white/80 text-lg md:text-xl">Manage your collection with style</p>
+                </div>
+
+                {/* Styled Add Book Button */}
+                <div className="mb-8 flex justify-center">
+                    <Link to={'/books/create'}>
+                        <button className="group relative flex items-center space-x-4 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-2xl rounded-2xl px-8 py-4 border border-white/30 hover:from-white/20 hover:to-white/10 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/25">
+                            <div className="relative">
+                                <FaPlus className="text-3xl text-white group-hover:text-cyan-300 transition-all duration-300 group-hover:scale-125" />
+                                <div className="absolute inset-0 bg-cyan-400/30 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <span className="text-white font-bold text-lg group-hover:text-cyan-300 transition-colors duration-300">Add New Book</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-purple-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Main content container */}
@@ -168,7 +183,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
