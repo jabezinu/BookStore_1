@@ -78,7 +78,7 @@ const Edit = () => {
 
   useEffect(() => {
     setLoading(true)
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/books/${id}`)
     .then((res) => {
       setTitle(res.data.title)
       setAuthor(res.data.author)
@@ -94,7 +94,7 @@ const Edit = () => {
   const handleUpdateButton = () => {
     setLoading(true)
     axios
-    .put(`http://localhost:5555/books/${id}`, {title, author, publishedYear})
+    .put(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/books/${id}`, {title, author, publishedYear})
     .then(() => {
         setLoading(false)        
     })
