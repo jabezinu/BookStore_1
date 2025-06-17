@@ -74,7 +74,7 @@ const Create = () => {
     const handleCreateButton = () => {
         setLoading(true);
         axios
-            .post(`http://localhost:5555/books`, { title, author, publishedYear })
+            .post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/books`, { title, author, publishedYear })
             .then(() => {
                 setLoading(false);
                 navigate('/');
